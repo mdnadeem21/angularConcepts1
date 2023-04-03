@@ -1,0 +1,10 @@
+<p>Parent Component</p>
+
+<button (click)="toggleChild()">Toggle Child</button>
+
+<input type="text" [(ngModel)]="channelName">
+
+<app-child *ngIf="isChild" [channelName]="channelName">
+
+    <h4 #projectedContent >ngAfterCheck Directive</h4>
+</app-child>

@@ -1,0 +1,53 @@
+<h1>Lazy Loading in Angular</h1>
+
+<ul>
+
+  <li>
+    <a routerLink="admin/login">Click for Login page</a>
+  </li>
+
+  <li>
+    <a routerLink="admin/list">Click for List</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+
+<hr>
+
+<!-- <h3>Reactive Forms</h3> -->
+     <h2><a routerLink="admin/reactiveForm">reactiveForm</a></h2>
+   <router-outlet></router-outlet> 
+
+
+
+<hr>
+<h2>Service in Angular</h2>
+<b>{{detail.name +" "}}</b> <b>{{detail.age}}</b>
+<br>
+
+<hr>
+
+<h1>Lifecycle Hooks concepts</h1>
+<app-parent></app-parent>
+
+<h2>Templet Form</h2>
+<div  >
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)"> 
+    <div>
+      <label for="username">User Name * </label>
+       <input type="text" #username="ngModel" required  name="username" ngModel>
+       <span class="error" *ngIf="username.invalid && username.touched"> username can't be empty</span>
+    </div>
+    <br>
+    <div>
+      <label for="password">password * </label>
+       <input type="password"  #password="ngModel" required name="password" ngModel>
+       <span class="error" *ngIf="password.invalid && password.touched"> password can't be empty</span>
+    </div>
+    <br>
+    <button type="submit" [disabled]="!userForm.valid" >Login</button>
+
+  </form>
+
+</div>

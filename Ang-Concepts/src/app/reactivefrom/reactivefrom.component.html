@@ -1,0 +1,12 @@
+<!-- <p>reactivefrom works!</p>  -->
+
+<form [formGroup]="loginForm" (ngSubmit)="getDatas()">
+    <label for="email">email : </label>
+    <input type="email" name="email" formControlName="email" id="email" placeholder="Enter email">
+    <br><br>
+    <label for="password">Password : </label>
+    <input type="password" name="password" formControlName="password" id="password" placeholder="Enter password">
+    <br><br>
+    <button type="submit">Login</button>
+
+</form>
